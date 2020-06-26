@@ -30,8 +30,8 @@ rmax=250000./111229. # range maksimum
 lonMax,lonMin=radarLon+(rmax),radarLon-(rmax) 
 latMax,latMin=radarLat+(rmax),radarLat-(rmax)
 nGrid=int(np.floor((lonMax-lonMin)/resCoords))+1 # jumlah grid
-lonGrid=np.linspace(lonMax,lonMin,nGrid) # grid longitude
-latGrid=np.linspace(latMax,latMin,nGrid) # grid latitude            
+lonGrid=np.linspace(lonMin,lonMax,nGrid) # grid longitude
+latGrid=np.linspace(latMin,latMax,nGrid) # grid latitude          
 dataContainer = np.zeros((len(lonGrid),len(latGrid))) # penampung data
 
 nElevation=len(data)
